@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Sale
+
+# Model Form Field configuration
+form: $/kurtjensen/eggs/models/sale/fields.yaml
+
+# Model Class name
+modelClass: KurtJensen\Eggs\Models\Sale
+
+# Default redirect location
+defaultRedirect: kurtjensen/eggs/sales
+
+# Create page
+create:
+    title: Create Sale
+    redirect: kurtjensen/eggs/sales/update/:id
+    redirectClose: kurtjensen/eggs/sales
+
+# Update page
+update:
+    title: Edit Sale
+    redirect: kurtjensen/eggs/sales
+    redirectClose: kurtjensen/eggs/sales
+
+# Preview page
+preview:
+    title: Preview Sale

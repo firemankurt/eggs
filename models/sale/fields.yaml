@@ -1,0 +1,30 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    peep_id:
+        label: Peep_id
+        type: dropdown
+        span: auto
+    description:
+        label: Description
+        type: dropdown
+        span: auto
+    qty:
+        label: Qty
+        default: 1
+        span: auto
+    amount:
+        label: $
+        default: '3.00'
+        type: text
+        span: auto
+    created_at:
+        label: Date
+        type: datepicker
+        span: auto
+    total:
+        label: Total
+        span: auto
+        disabled: true

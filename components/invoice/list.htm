@@ -1,0 +1,53 @@
+            <div id="yearTotal">
+{% partial __SELF__~'::total' %}
+            </div>
+<!-- Start sale-list.htm -->
+            <table class="table">
+                <tr>
+                    <th class="">Customer</th>
+                    <th class="">Description</th>
+                    <th class="">Qty</th>
+                    <th class="">Amount</th>
+                    <th class="">Created_at</th>
+                    <th class="">Total</th>
+                    <th class="">
+                        <button
+                            claas="btn btn-default"
+                            title="Add"
+                            data-request="Invoice::onForm" 
+                            data-request-update="'Invoice::form': '#saleinfo'">
+                            New <i class="icon-plus btn-icon danger"></i>
+                        </button>
+                    </th>
+                </tr>
+{% for sale in __SELF__.sales  %}
+                <tr>
+                    <td class="">{{ sale.peep.name }}</td>
+                    <td class="">{{ sale.description }}</td>
+                    <td class="">{{ sale.qty }}</td>
+                    <td class="">{{ sale.amount }}</td>
+                    <td class="">{{ sale.created_at|date('m/d/Y H:m') }}</td>
+                    <td class="">{{ sale.total }}</td>
+                    <td class="">
+                        <button
+                            claas="btn btn-default" 
+                            title="Edit"
+                            data-request="Invoice::onForm"  
+                            data-request-data="id: {{ sale.id }}"
+                            data-request-update="'Invoice::form': '#saleinfo'">
+                            <i class="icon-pencil btn-icon danger"></i>
+                        </button>
+                        <button
+                            claas="btn btn-default" 
+                            title="Delete"
+                            data-request="Invoice::onDelete" 
+                            data-request-data="id: {{ sale.id }}"
+                            data-request-confirm="Are you sure you want to delete this?"
+                            data-request-update="'Invoice::list': '#saleinfo'">
+                            <i class="icon-trash btn-icon danger"></i>
+                        </button>
+                    </td>
+                </tr>
+{% endfor %}
+            </table>
+<!-- End sale-list.htm -->

@@ -1,0 +1,14 @@
+<h3> 
+    <a href="#yearTotal"
+        data-request="onSalesTotal" 
+		data-request-update="'Invoice::total': '#yearTotal'"
+		data-request-data="year:{{ year-1 }}"
+		>{{ year-1 }}</a> &lt; - 
+ Total for <strong>{{ year }} = ${{ salesTotals }}</strong>
+ - &gt;
+    <a href="#yearTotal"
+        data-request="onSalesTotal" 
+		data-request-update="'Invoice::total': '#yearTotal'"
+		data-request-data="year:{{ year+1 }}"
+		>{{ year+1 }}</a>
+</h3>

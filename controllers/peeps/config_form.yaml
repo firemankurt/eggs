@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Peep
+
+# Model Form Field configuration
+form: $/kurtjensen/eggs/models/peep/fields.yaml
+
+# Model Class name
+modelClass: KurtJensen\Eggs\Models\Peep
+
+# Default redirect location
+defaultRedirect: kurtjensen/eggs/peeps
+
+# Create page
+create:
+    title: Create Peep
+    redirect: kurtjensen/eggs/peeps/update/:id
+    redirectClose: kurtjensen/eggs/peeps
+
+# Update page
+update:
+    title: Edit Peep
+    redirect: kurtjensen/eggs/peeps
+    redirectClose: kurtjensen/eggs/peeps
+
+# Preview page
+preview:
+    title: Preview Peep

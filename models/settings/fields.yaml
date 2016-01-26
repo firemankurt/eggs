@@ -1,0 +1,13 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    products:
+        label: Products
+        type: textarea
+        span: auto
+    price:
+        label: Prices
+        type: text
+        span: auto

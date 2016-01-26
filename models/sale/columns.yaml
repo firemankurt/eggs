@@ -1,0 +1,24 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+        searchable: true
+    created_at:
+        label: Date
+    peep:
+        label: User First      
+        relation: peep
+        select: name 
+        searchable: true
+        sortable: true  
+    description:
+        label: Description
+    qty:
+        label: Qty
+    amount:
+        label: $
+    total:
+        label: Total
